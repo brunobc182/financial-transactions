@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Input from '../../presentational';
+import { Container, Input } from '../../presentational';
 
 export default class Home extends Component {
   constructor() {
@@ -8,6 +8,10 @@ export default class Home extends Component {
   }
 
   render() {
-    return <Input />;
+    return (
+      <Container>
+        <Input />
+      </Container>
+    );
   }
 }
