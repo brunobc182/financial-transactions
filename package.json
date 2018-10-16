@@ -16,10 +16,10 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development ./src",
-    "test": "xo && jest ./src --runInBand  --no-cache",
-    "test:coverage": "xo && jest --coverage",
+    "test": "npm run lint && jest ./src --runInBand  --no-cache",
+    "test:coverage": "npm run lint && jest --coverage",
     "test:watch": "npm run test -- --watch",
-    "lint": "xo src/**/*.js",
+    "lint": "./node_modules/eslint/bin/eslint.js src",
     "cypress:open": "cypress open",
     "cypress:all": "cypress run"
   },
@@ -28,13 +28,6 @@
       "pre-commit": "npm run test:coverage",
       "pre-push": "npm run test:coverage"
     }
-  },
-  "xo": {
-    "prettier": true,
-    "extends": "xo-react",
-    "parser": "babel-eslint",
-    "esnext": true,
-    "space": true
   },
   "jest": {
     "verbose": true,
@@ -66,10 +59,8 @@
     "cypress": "^3.1.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "eslint": "^5.6.1",
+    "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-xo-react": "^0.16.0",
-    "eslint-config-xo-space": "^0.20.0",
     "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
@@ -82,10 +73,13 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "sinon": "^6.3.5",
+    "stylelint": "^9.6.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9",
-    "xo": "^0.23.0"
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -94,6 +88,8 @@
     "babel-preset-react": "^6.24.1",
     "jest": "^23.6.0",
     "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2",
     "styled-components": "^3.4.9"
   }
