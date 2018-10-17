@@ -1,5 +1,7 @@
 import React from 'react';
-import { func, string } from 'prop-types';
+import {
+  func, oneOfType, string, number,
+} from 'prop-types';
 import styled from 'styled-components';
 import CurrencyInput from 'react-currency-input';
 import colors from '../../theme/colors';
@@ -29,12 +31,13 @@ const InputComponent = styled(CurrencyInput)`
   line-height: 1.5;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   outline: none;
+  border-radius: 4px;
 `;
 
 Input.propTypes = {
   placeholder: string,
   onChange: func,
-  value: string,
+  value: oneOfType([string, number]),
   prefix: string,
   sufix: string,
 };

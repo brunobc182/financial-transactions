@@ -1,26 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home should render correctly 1`] = `
-<div
-  className="sc-bwzfXH dmRqIO"
+<section
+  className="sc-ifAKCX bMIgkK"
 >
   <div
-    className="sc-bxivhb iiZwOF"
+    className="sc-EHOje jzrzrp"
   >
-    <button
-      className="sc-bdVaJa MGBuz"
-      onClick={null}
-      type="button"
+    <div
+      className="sc-bZQynM hjHjiY"
     >
-      + Credit
-    </button>
-    <button
-      className="sc-bdVaJa fXbmYB"
-      onClick={null}
-      type="button"
-    >
-      - Debit
-    </button>
+      <button
+        className="sc-bdVaJa aajhJ"
+        onClick={[Function]}
+        type="button"
+      >
+        + Credit
+      </button>
+      <button
+        className="sc-bdVaJa bEifWJ"
+        onClick={[Function]}
+        type="button"
+      >
+        - Debit
+      </button>
+    </div>
   </div>
-</div>
+  <div
+    className="sc-gzVnrw hkMjPv"
+  >
+    <ul
+      className="sc-htpNat fyjIhF"
+    />
+  </div>
+</section>
 `;

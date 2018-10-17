@@ -15,8 +15,8 @@ const Button = ({
 
 const ButtonComponent = styled.button`
   width: 100%;
-  max-width: 140px;
   height: 40px;
+  margin: 0 5px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   background: ${({ isDebit }) => (isDebit ? colors.radicalRed : colors.shamrock)};
   border-radius: 4px;

@@ -3,14 +3,11 @@ import styled from 'styled-components';
 import { node, array, oneOfType } from 'prop-types';
 import colors from '../../theme/colors';
 
-const TransactionList = ({ data }) => {
-  console.log('Transaction List', data);
-  return (
-    <ListWrapper>
-      {data && data.map(({ type, value }) => <ListItem type={type}>{value}</ListItem>)}
-    </ListWrapper>
-  );
-};
+const TransactionList = ({ data }) => (
+  <ListWrapper>
+    {data && data.map(({ type, value }) => <ListItem type={type}>{value}</ListItem>)}
+  </ListWrapper>
+);
 const ListWrapper = styled.ul`
   width: 100%;
   list-style: none;
