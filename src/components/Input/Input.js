@@ -1,13 +1,26 @@
 import React from 'react';
 import { func, string } from 'prop-types';
 import styled from 'styled-components';
+import CurrencyInput from 'react-currency-input';
 import colors from '../../theme/colors';
 
-const Input = ({ placeholder, onChange }) => (
-  <InputComponent placeholder={placeholder} onChange={onChange} />
+const Input = ({
+  placeholder, onChange, value, prefix, sufix,
+}) => (
+  <InputComponent
+    placeholder={placeholder}
+    onChangeEvent={onChange}
+    value={value}
+    type="tel"
+    decimalSeparator=","
+    thousandSeparator="."
+    prefix={prefix}
+    sufix={sufix}
+    selectAllOnFocus
+  />
 );
 
-const InputComponent = styled.input`
+const InputComponent = styled(CurrencyInput)`
   height: 48px;
   border: none;
   padding: 10px 15px;
@@ -21,11 +34,17 @@ const InputComponent = styled.input`
 Input.propTypes = {
   placeholder: string,
   onChange: func,
+  value: string,
+  prefix: string,
+  sufix: string,
 };
 
 Input.defaultProps = {
   placeholder: 'Placeholder',
   onChange: null,
+  value: '0.00',
+  sufix: '',
+  prefix: '$ ',
 };
 
 export default Input;

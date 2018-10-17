@@ -5,13 +5,22 @@ import { Button, Container, Input } from '../../components';
 export default class Home extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      amount: '0',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event, maskedvalue) {
+    this.setState({ amount: maskedvalue });
   }
 
   render() {
+    const { amount } = this.state;
     return (
       <Container>
-        <Input />
+        <Input value={amount} onChange={this.handleChange} />
         <ButtonWrapper>
           <Button>+ Credit</Button>
           <Button isDebit>- Debit</Button>
