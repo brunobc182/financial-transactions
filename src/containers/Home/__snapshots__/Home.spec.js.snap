@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home should render correctly 1`] = `
-<input
-  className="sc-bdVaJa kKcDuj"
-/>
+<div
+  className="sc-bwzfXH dmRqIO"
+>
+  <div
+    className="sc-bxivhb iiZwOF"
+  >
+    <button
+      className="sc-bdVaJa MGBuz"
+      onClick={null}
+      type="button"
+    >
+      + Credit
+    </button>
+    <button
+      className="sc-bdVaJa fXbmYB"
+      onClick={null}
+      type="button"
+    >
+      - Debit
+    </button>
+  </div>
+</div>
 `;

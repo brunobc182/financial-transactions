@@ -1,12 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Home from './Home';
+import Container from './Container';
 
-jest.mock('react-currency-input');
-
-describe('Home', () => {
+describe('Container', () => {
   it('should render correctly', () => {
-    const tree = renderer.create(<Home />).toJSON();
+    const tree = renderer.create(<Container>Children</Container>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
