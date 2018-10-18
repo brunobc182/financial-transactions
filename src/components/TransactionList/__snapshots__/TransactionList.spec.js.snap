@@ -5,7 +5,8 @@ exports[`TransactionList should render correctly 1`] = `
   className="sc-bdVaJa eKiYv"
 >
   <li
-    className="sc-bwzfXH grBZiU"
+    className="sc-bwzfXH dwTtjc"
+    id={0}
     type="DEBIT"
   >
     <p
@@ -13,6 +14,13 @@ exports[`TransactionList should render correctly 1`] = `
     >
       $ 10,00
     </p>
+    <button
+      className="sc-bxivhb eJBkbL"
+      onClick={[Function]}
+      type="button"
+    >
+      X
+    </button>
   </li>
 </ol>
 `;

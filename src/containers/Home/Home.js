@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   Button, Input, TransactionList, TransactionsTotal,
 } from '../../components';
-import { TRANSACTION_TYPE } from '../../utils';
+import { TRANSACTION_TYPE, getItem, setItem } from '../../utils';
 
 const { CREDIT, DEBIT } = TRANSACTION_TYPE;
 
@@ -18,11 +18,32 @@ export default class Home extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleNewTransaction = this.handleNewTransaction.bind(this);
+    this.handleDeleteTransaction = this.handleDeleteTransaction.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      transactions: getItem('transactions') || [],
+    });
+  }
+
+  componentDidUpdate() {
+    const { transactions } = this.state;
+    // console.log('Chamou did update', transactions);
+    setItem('transactions', transactions);
   }
 
   handleChange(event, maskedvalue, floatvalue) {
     this.setState({
       amount: floatvalue,
+    });
+  }
+
+  handleDeleteTransaction(event) {
+    // console.log(event);
+    this.setState((prevState) => {
+      const newTransactions = prevState.transactions.filter((value, index) => event !== index);
+      return { transactions: newTransactions };
     });
   }
 
@@ -56,10 +77,10 @@ export default class Home extends Component {
             </Button>
           </ButtonWrapper>
         </Container>
-        <ListWrapper>
-          <TransactionList data={transactions} />
-        </ListWrapper>
         <TransactionsTotal data={transactions} />
+        <ListWrapper>
+          <TransactionList data={transactions} onClick={this.handleDeleteTransaction} />
+        </ListWrapper>
       </Wrapper>
     );
   }
@@ -78,7 +99,7 @@ const Container = styled.div`
   align-items: center;
   max-width: 320px;
   width: 100%;
-  margin-top: 30px;
+  margin: 30px 0 10px 0;
 `;
 const ButtonWrapper = styled.div`
   display: flex;

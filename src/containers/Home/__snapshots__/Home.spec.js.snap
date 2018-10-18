@@ -2,13 +2,13 @@
 
 exports[`Home should render correctly 1`] = `
 <section
-  className="sc-gzVnrw jNxmNF"
+  className="sc-htoDjs kXIWvg"
 >
   <div
-    className="sc-htoDjs hgIVdp"
+    className="sc-dnqmqq lnqZqM"
   >
     <div
-      className="sc-dnqmqq jHAetk"
+      className="sc-iwsKbI kkYPMx"
     >
       <button
         className="sc-bdVaJa FuSKv"
@@ -29,21 +29,21 @@ exports[`Home should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-iwsKbI dzTaIY"
-  >
-    <ol
-      className="sc-htpNat gRaolP"
-    />
-  </div>
-  <div
-    className="sc-EHOje fhxHOS"
+    className="sc-bZQynM kzlsZH"
   >
     <p
-      className="sc-bZQynM iRbXPA"
+      className="sc-gzVnrw cVHVJI"
     >
       Total: 
       $ 0,00
     </p>
+  </div>
+  <div
+    className="sc-gZMcBi bNbNV"
+  >
+    <ol
+      className="sc-htpNat gRaolP"
+    />
   </div>
 </section>
 `;

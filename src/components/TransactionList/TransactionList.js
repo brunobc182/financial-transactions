@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { node, array, oneOfType } from 'prop-types';
+import {
+  node, array, oneOfType, func,
+} from 'prop-types';
 import colors from '../../theme/colors';
 import { moneyFormat } from '../../utils';
 
-const TransactionList = ({ data }) => (
+const TransactionList = ({ data, onClick }) => (
   <ListWrapper>
     {data
       && data.map(({ type, value }, index) => (
-        <ListItem key={`id${data.length - index}`} type={type}>
+        <ListItem key={`id${data.length - index}`} id={index} type={type}>
           <ListItemContent>{moneyFormat(value, '$')}</ListItemContent>
+          <DeleteButton type="button" onClick={() => onClick(index)}>
+            X
+          </DeleteButton>
         </ListItem>
       ))}
   </ListWrapper>
@@ -20,9 +25,9 @@ const ListWrapper = styled.ol`
 `;
 
 const ListItem = styled.li`
-  text-align: center;
+  position: relative;
   list-style-position: inside;
-  width: 100%;
+  padding-left: 20px;
   height: 48px;
   font-size: 22px;
   color: ${colors.white};
@@ -37,7 +42,22 @@ const ListItemContent = styled.p`
   padding: 0;
 `;
 
+const DeleteButton = styled.button`
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  border-radius: 100%;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+`;
+
 TransactionList.propTypes = {
   data: oneOfType([node, array]).isRequired,
+  onClick: func.isRequired,
 };
 export default TransactionList;
