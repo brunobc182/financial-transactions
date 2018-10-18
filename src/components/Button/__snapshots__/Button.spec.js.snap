@@ -2,7 +2,8 @@
 
 exports[`Button should render correctly 1`] = `
 <button
-  className="sc-bdVaJa aajhJ"
+  className="sc-bdVaJa FuSKv"
+  disabled={false}
   onClick={null}
   type="button"
 >

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionList should render correctly 1`] = `
+<ol
+  className="sc-bdVaJa eKiYv"
+>
+  <li
+    className="sc-bwzfXH grBZiU"
+    type="DEBIT"
+  >
+    <p
+      className="sc-htpNat hiCggQ"
+    >
+      $ 10,00
+    </p>
+  </li>
+</ol>
+`;

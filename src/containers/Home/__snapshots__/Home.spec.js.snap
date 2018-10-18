@@ -2,23 +2,25 @@
 
 exports[`Home should render correctly 1`] = `
 <section
-  className="sc-ifAKCX bMIgkK"
+  className="sc-gzVnrw jNxmNF"
 >
   <div
-    className="sc-EHOje jzrzrp"
+    className="sc-htoDjs hgIVdp"
   >
     <div
-      className="sc-bZQynM hjHjiY"
+      className="sc-dnqmqq jHAetk"
     >
       <button
-        className="sc-bdVaJa aajhJ"
+        className="sc-bdVaJa FuSKv"
+        disabled={true}
         onClick={[Function]}
         type="button"
       >
         + Credit
       </button>
       <button
-        className="sc-bdVaJa bEifWJ"
+        className="sc-bdVaJa eRvfdK"
+        disabled={true}
         onClick={[Function]}
         type="button"
       >
@@ -27,11 +29,21 @@ exports[`Home should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw hkMjPv"
+    className="sc-iwsKbI dzTaIY"
   >
-    <ul
-      className="sc-htpNat fyjIhF"
+    <ol
+      className="sc-htpNat gRaolP"
     />
+  </div>
+  <div
+    className="sc-EHOje fhxHOS"
+  >
+    <p
+      className="sc-bZQynM iRbXPA"
+    >
+      Total: 
+      $ 0,00
+    </p>
   </div>
 </section>
 `;

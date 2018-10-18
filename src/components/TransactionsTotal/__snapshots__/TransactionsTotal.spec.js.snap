@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsTotal should render correctly 1`] = `
+<div
+  className="sc-bdVaJa kZAgjJ"
+>
+  <p
+    className="sc-bwzfXH fXCYwK"
+  >
+    Total: 
+    $ 10,00
+  </p>
+</div>
+`;

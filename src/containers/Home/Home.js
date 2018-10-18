@@ -31,19 +31,27 @@ export default class Home extends Component {
     const handleDebitValue = type === DEBIT ? -amount : amount;
 
     this.setState(prevState => ({
+      amount: 0,
       transactions: [...prevState.transactions, { type, value: handleDebitValue }],
     }));
   }
 
   render() {
     const { amount, transactions } = this.state;
+    const disabledButton = amount <= 0;
     return (
       <Wrapper>
         <Container>
           <Input value={amount} onChange={this.handleChange} />
           <ButtonWrapper>
-            <Button onClick={() => this.handleNewTransaction(CREDIT)}>+ Credit</Button>
-            <Button onClick={() => this.handleNewTransaction(DEBIT)} isDebit>
+            <Button onClick={() => this.handleNewTransaction(CREDIT)} disabled={disabledButton}>
+              + Credit
+            </Button>
+            <Button
+              onClick={() => this.handleNewTransaction(DEBIT)}
+              disabled={disabledButton}
+              isDebit
+            >
               - Debit
             </Button>
           </ButtonWrapper>

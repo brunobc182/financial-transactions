@@ -9,21 +9,19 @@ const TransactionList = ({ data }) => (
     {data
       && data.map(({ type, value }, index) => (
         <ListItem key={`id${data.length - index}`} type={type}>
-          {moneyFormat(value, '$')}
+          <ListItemContent>{moneyFormat(value, '$')}</ListItemContent>
         </ListItem>
       ))}
   </ListWrapper>
 );
-const ListWrapper = styled.ul`
+const ListWrapper = styled.ol`
   width: 100%;
-  list-style: none;
   padding: 0;
 `;
 
 const ListItem = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  list-style-position: inside;
   width: 100%;
   height: 48px;
   font-size: 22px;
@@ -32,6 +30,11 @@ const ListItem = styled.li`
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: 5px 0;
   border-radius: 4px;
+`;
+const ListItemContent = styled.p`
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
 `;
 
 TransactionList.propTypes = {

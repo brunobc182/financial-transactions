@@ -6,9 +6,9 @@ import styled from 'styled-components';
 import colors from '../../theme/colors';
 
 const Button = ({
-  children, onClick, type, isDebit,
+  children, onClick, type, isDebit, disabled,
 }) => (
-  <ButtonComponent type={type} onClick={onClick} isDebit={isDebit}>
+  <ButtonComponent type={type} onClick={onClick} isDebit={isDebit} disabled={disabled}>
     {children}
   </ButtonComponent>
 );
@@ -37,6 +37,11 @@ const ButtonComponent = styled.button`
     position: relative;
     top: 1px;
   }
+
+  :disabled {
+    background: ${({ isDebit }) => (isDebit ? colors.cinnabar : colors.emerald)};
+    opacity: 0.5;
+  }
 `;
 
 Button.propTypes = {
@@ -44,6 +49,7 @@ Button.propTypes = {
   isDebit: bool,
   onClick: func,
   type: string,
+  disabled: bool,
 };
 
 Button.defaultProps = {
@@ -51,6 +57,7 @@ Button.defaultProps = {
   isDebit: false,
   onClick: null,
   type: 'button',
+  disabled: false,
 };
 
 export default Button;
