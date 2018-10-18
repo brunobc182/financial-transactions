@@ -1,4 +1,4 @@
-export const COLORS = {
+const COLORS = {
   dodgerBlue: '#1e90ff',
   meteorite: '#3c1f76',
   shamrock: '#33cc99',

@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { node, array, oneOfType } from 'prop-types';
 import colors from '../../theme/colors';
+import { moneyFormat } from '../../utils';
 
 const TransactionList = ({ data }) => (
   <ListWrapper>
-    {data && data.map(({ type, value }) => <ListItem type={type}>{value}</ListItem>)}
+    {data
+      && data.map(({ type, value }, index) => (
+        <ListItem key={`id${data.length - index}`} type={type}>
+          {moneyFormat(value, '$')}
+        </ListItem>
+      ))}
   </ListWrapper>
 );
 const ListWrapper = styled.ul`

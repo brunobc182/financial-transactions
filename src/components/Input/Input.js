@@ -7,7 +7,7 @@ import CurrencyInput from 'react-currency-input';
 import colors from '../../theme/colors';
 
 const Input = ({
-  placeholder, onChange, value, prefix, sufix,
+  placeholder, onChange, value, prefix, sufix, maxLength,
 }) => (
   <InputComponent
     placeholder={placeholder}
@@ -18,6 +18,7 @@ const Input = ({
     thousandSeparator="."
     prefix={prefix}
     sufix={sufix}
+    maxLength={maxLength}
     selectAllOnFocus
   />
 );
@@ -40,6 +41,7 @@ Input.propTypes = {
   value: oneOfType([string, number]),
   prefix: string,
   sufix: string,
+  maxLength: string,
 };
 
 Input.defaultProps = {
@@ -48,6 +50,7 @@ Input.defaultProps = {
   value: '0.00',
   sufix: '',
   prefix: '$ ',
+  maxLength: '18',
 };
 
 export default Input;

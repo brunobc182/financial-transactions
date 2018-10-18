@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Button, Input, TransactionList } from '../../components';
+import {
+  Button, Input, TransactionList, TransactionsTotal,
+} from '../../components';
+import { TRANSACTION_TYPE } from '../../utils';
+
+const { CREDIT, DEBIT } = TRANSACTION_TYPE;
 
 export default class Home extends Component {
   constructor() {
     super();
+
     this.state = {
       amount: 0,
       transactions: [],
@@ -20,10 +26,12 @@ export default class Home extends Component {
     });
   }
 
-  handleNewTransaction() {
+  handleNewTransaction(type) {
     const { amount } = this.state;
+    const handleDebitValue = type === DEBIT ? -amount : amount;
+
     this.setState(prevState => ({
-      transactions: [...prevState.transactions, { type: 'DEBIT', value: amount }],
+      transactions: [...prevState.transactions, { type, value: handleDebitValue }],
     }));
   }
 
@@ -34,8 +42,8 @@ export default class Home extends Component {
         <Container>
           <Input value={amount} onChange={this.handleChange} />
           <ButtonWrapper>
-            <Button onClick={this.handleNewTransaction}>+ Credit</Button>
-            <Button onClick={this.handleNewTransaction} isDebit>
+            <Button onClick={() => this.handleNewTransaction(CREDIT)}>+ Credit</Button>
+            <Button onClick={() => this.handleNewTransaction(DEBIT)} isDebit>
               - Debit
             </Button>
           </ButtonWrapper>
@@ -43,6 +51,7 @@ export default class Home extends Component {
         <ListWrapper>
           <TransactionList data={transactions} />
         </ListWrapper>
+        <TransactionsTotal data={transactions} />
       </Wrapper>
     );
   }
