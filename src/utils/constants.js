@@ -1,0 +1,6 @@
+const TRANSACTION_TYPE = {
+  DEBIT: 'DEBIT',
+  CREDIT: 'CREDIT',
+};
+
+export default TRANSACTION_TYPE;
