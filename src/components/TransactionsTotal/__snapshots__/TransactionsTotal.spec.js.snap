@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransactionsTotal should render correctly 1`] = `
+exports[`TransactionsTotal should render correctly when the total of velues is positive 1`] = `
 <div
   className="sc-bdVaJa kZAgjJ"
 >
@@ -9,6 +9,19 @@ exports[`TransactionsTotal should render correctly 1`] = `
   >
     Total: 
     $ 10,00
+  </p>
+</div>
+`;
+
+exports[`TransactionsTotal should render correctly when the total of velues is positive 2`] = `
+<div
+  className="sc-bdVaJa kZAgjJ"
+>
+  <p
+    className="sc-bwzfXH eXCmRs"
+  >
+    Total: 
+    $ -10,00
   </p>
 </div>
 `;

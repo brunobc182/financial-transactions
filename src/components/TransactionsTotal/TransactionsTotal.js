@@ -12,7 +12,7 @@ const TransactionsTotal = ({ data }) => {
     <TotalWrapper>
       <Total total={total}>
         {totalLabel}
-        {moneyFormat(total, '$')}
+        {moneyFormat(total)}
       </Total>
     </TotalWrapper>
   );
