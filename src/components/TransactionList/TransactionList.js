@@ -11,7 +11,7 @@ const TransactionList = ({ data, onClick }) => (
     {data
       && data.map(({ type, value }, index) => (
         <ListItem key={`id${data.length - index}`} id={index} type={type}>
-          <ListItemContent>{moneyFormat(value, '$')}</ListItemContent>
+          <ListItemContent>{moneyFormat(value)}</ListItemContent>
           <DeleteButton type="button" onClick={() => onClick(index)}>
             X
           </DeleteButton>

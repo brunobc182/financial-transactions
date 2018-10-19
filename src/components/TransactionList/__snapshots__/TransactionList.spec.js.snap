@@ -5,6 +5,31 @@ exports[`TransactionList should render correctly 1`] = `
   className="sc-bdVaJa eKiYv"
 >
   <li
+    className="sc-bwzfXH gRqglU"
+    id={0}
+    type="CREDIT"
+  >
+    <p
+      className="sc-htpNat hiCggQ"
+    >
+      $ 10,00
+    </p>
+    <button
+      className="sc-bxivhb eJBkbL"
+      onClick={[Function]}
+      type="button"
+    >
+      X
+    </button>
+  </li>
+</ol>
+`;
+
+exports[`TransactionList should render correctly with type DEBIT prop 1`] = `
+<ol
+  className="sc-bdVaJa eKiYv"
+>
+  <li
     className="sc-bwzfXH dwTtjc"
     id={0}
     type="DEBIT"
