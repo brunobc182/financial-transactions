@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import {
   Button, Input, TransactionList, TransactionsTotal,
 } from '../../components';
-import { TRANSACTION_TYPE, getItem, setItem } from '../../utils';
+import {
+  TRANSACTION_TYPE, getItem, setItem, LOCAL_STORAGE_NAME,
+} from '../../utils';
 
 const { CREDIT, DEBIT } = TRANSACTION_TYPE;
 
@@ -23,14 +25,13 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.setState({
-      transactions: getItem('transactions') || [],
+      transactions: getItem(LOCAL_STORAGE_NAME) || [],
     });
   }
 
   componentDidUpdate() {
     const { transactions } = this.state;
-    // console.log('Chamou did update', transactions);
-    setItem('transactions', transactions);
+    setItem(LOCAL_STORAGE_NAME, transactions);
   }
 
   handleChange(event, maskedvalue, floatvalue) {
@@ -40,7 +41,6 @@ export default class Home extends Component {
   }
 
   handleDeleteTransaction(event) {
-    // console.log(event);
     this.setState((prevState) => {
       const newTransactions = prevState.transactions.filter((value, index) => event !== index);
       return { transactions: newTransactions };
