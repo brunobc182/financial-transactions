@@ -3,4 +3,6 @@ const TRANSACTION_TYPE = {
   CREDIT: 'CREDIT',
 };
 
-export default TRANSACTION_TYPE;
+const LOCAL_STORAGE_NAME = 'transactions';
+
+export { TRANSACTION_TYPE, LOCAL_STORAGE_NAME };
