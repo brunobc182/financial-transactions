@@ -1,4 +1,4 @@
-const COLORS = {
+const COLOR_PALLETE = {
   dodgerBlue: '#1e90ff',
   meteorite: '#3c1f76',
   shamrock: '#33cc99',
@@ -10,4 +10,4 @@ const COLORS = {
   pickledBluewood: '#314459',
 };
 
-export default COLORS;
+export default COLOR_PALLETE;
