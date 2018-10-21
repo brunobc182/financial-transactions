@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render correctly 1`] = `
+<section
+  className="sc-htoDjs kXIWvg"
+>
+  <h1
+    className="sc-dnqmqq hQhTQM"
+  >
+    My Transactions
+  </h1>
+  <div
+    className="sc-iwsKbI goSOXs"
+  >
+    <div
+      className="sc-gZMcBi bLaLEq"
+    >
+      <button
+        className="sc-bdVaJa FuSKv"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        + Credit
+      </button>
+      <button
+        className="sc-bdVaJa eRvfdK"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        - Debit
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-bZQynM kzlsZH"
+  >
+    <p
+      className="sc-gzVnrw cVHVJI"
+    >
+      Total: 
+      $ 0,00
+    </p>
+  </div>
+  <div
+    className="sc-gqjmRU gTfdsi"
+  >
+    <ol
+      className="sc-htpNat gRaolP"
+    />
+  </div>
+</section>
+`;
