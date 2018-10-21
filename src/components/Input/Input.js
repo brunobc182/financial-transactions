@@ -4,7 +4,7 @@ import {
 } from 'prop-types';
 import styled from 'styled-components';
 import CurrencyInput from 'react-currency-input';
-import colors from '../../theme/colors';
+import COLOR_PALLETE from '../../theme';
 
 const Input = ({
   placeholder, onChange, value, prefix, sufix, maxLength,
@@ -28,7 +28,7 @@ const InputComponent = styled(CurrencyInput)`
   border: none;
   padding: 10px 15px;
   font-size: 22px;
-  color: ${colors.pickledBluewood};
+  color: ${COLOR_PALLETE.pickledBluewood};
   line-height: 1.5;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   outline: none;

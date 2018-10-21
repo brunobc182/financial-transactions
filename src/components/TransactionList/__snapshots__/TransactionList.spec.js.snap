@@ -15,7 +15,7 @@ exports[`TransactionList should render correctly 1`] = `
       $ 10,00
     </p>
     <button
-      className="sc-bxivhb eJBkbL"
+      className="sc-bxivhb dPMNBd"
       onClick={[Function]}
       type="button"
     >
@@ -40,7 +40,7 @@ exports[`TransactionList should render correctly with type DEBIT prop 1`] = `
       $ 10,00
     </p>
     <button
-      className="sc-bxivhb eJBkbL"
+      className="sc-bxivhb dPMNBd"
       onClick={[Function]}
       type="button"
     >

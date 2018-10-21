@@ -4,11 +4,16 @@ exports[`Home should render correctly 1`] = `
 <section
   className="sc-htoDjs kXIWvg"
 >
+  <h1
+    className="sc-dnqmqq hQhTQM"
+  >
+    My Transactions
+  </h1>
   <div
-    className="sc-dnqmqq lnqZqM"
+    className="sc-iwsKbI goSOXs"
   >
     <div
-      className="sc-iwsKbI kkYPMx"
+      className="sc-gZMcBi bLaLEq"
     >
       <button
         className="sc-bdVaJa FuSKv"
@@ -39,7 +44,7 @@ exports[`Home should render correctly 1`] = `
     </p>
   </div>
   <div
-    className="sc-gZMcBi bNbNV"
+    className="sc-gqjmRU gTfdsi"
   >
     <ol
       className="sc-htpNat gRaolP"
