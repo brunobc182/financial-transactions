@@ -39,6 +39,7 @@ describe('Home', () => {
       {
         type: DEBIT,
         value: -1,
+        partialTotal: 9,
       },
     ];
 
@@ -48,10 +49,12 @@ describe('Home', () => {
         {
           type: CREDIT,
           value: 10,
+          partialTotal: 10,
         },
         {
           type: DEBIT,
           value: -1,
+          partialTotal: 9,
         },
       ],
     });
@@ -70,6 +73,7 @@ describe('Home', () => {
       {
         type: CREDIT,
         value: 10,
+        partialTotal: 10,
       },
     ];
 
@@ -92,6 +96,7 @@ describe('Home', () => {
       {
         type: DEBIT,
         value: -90,
+        partialTotal: -90,
       },
     ];
 

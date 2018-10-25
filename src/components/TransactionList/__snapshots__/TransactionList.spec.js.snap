@@ -5,22 +5,29 @@ exports[`TransactionList should render correctly 1`] = `
   className="sc-bdVaJa eKiYv"
 >
   <li
-    className="sc-bwzfXH gRqglU"
+    className="sc-bwzfXH nvvBT"
     id={0}
     type="CREDIT"
   >
     <p
-      className="sc-htpNat hiCggQ"
+      className="sc-bxivhb ebNakS"
     >
       $ 10,00
     </p>
     <button
-      className="sc-bxivhb dPMNBd"
+      className="sc-ifAKCX iQMyXW"
       onClick={[Function]}
       type="button"
     >
       X
     </button>
+    <p
+      className="sc-htpNat bhpHJD"
+      id="partialTotal0"
+    >
+      Partial total: 
+      $ 10,00
+    </p>
   </li>
 </ol>
 `;
@@ -30,22 +37,29 @@ exports[`TransactionList should render correctly with type DEBIT prop 1`] = `
   className="sc-bdVaJa eKiYv"
 >
   <li
-    className="sc-bwzfXH dwTtjc"
+    className="sc-bwzfXH pVnAt"
     id={0}
     type="DEBIT"
   >
     <p
-      className="sc-htpNat hiCggQ"
+      className="sc-bxivhb ebNakS"
     >
       $ 10,00
     </p>
     <button
-      className="sc-bxivhb dPMNBd"
+      className="sc-ifAKCX iQMyXW"
       onClick={[Function]}
       type="button"
     >
       X
     </button>
+    <p
+      className="sc-htpNat bhpHJD"
+      id="partialTotal0"
+    >
+      Partial total: 
+      $ 10,00
+    </p>
   </li>
 </ol>
 `;
