@@ -4,19 +4,24 @@ import {
   node, array, oneOfType, func, string,
 } from 'prop-types';
 import COLOR_PALLETE from '../../theme';
-import { moneyFormat, TRANSACTION_TYPE } from '../../utils';
+import { moneyFormat, TRANSACTION_TYPE, MESSAGES } from '../../utils';
 
+const { partialTotalLabel } = MESSAGES;
 const { radicalRed, shamrock, white } = COLOR_PALLETE;
 
 const TransactionList = ({ data, onClick, hint }) => (
   <ListWrapper>
     {data
-      && data.map(({ type, value }, index) => (
+      && data.map(({ type, value, partialTotal }, index) => (
         <ListItem key={`id${data.length - index}`} id={index} type={type}>
           <ListItemContent>{moneyFormat(value)}</ListItemContent>
           <DeleteButton type="button" onClick={() => onClick(index)} hint={hint}>
             X
           </DeleteButton>
+          <PartialTotal id={`partialTotal${index}`}>
+            {partialTotalLabel}
+            {moneyFormat(partialTotal)}
+          </PartialTotal>
         </ListItem>
       ))}
   </ListWrapper>
@@ -31,13 +36,17 @@ const ListItem = styled.li`
   position: relative;
   list-style-position: inside;
   padding-left: 20px;
-  height: 48px;
+  height: 80px;
   font-size: 22px;
   color: ${white};
   background-color: ${({ type }) => (type === TRANSACTION_TYPE.DEBIT ? radicalRed : shamrock)};
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   margin: 5px 0;
   border-radius: 4px;
+`;
+
+const PartialTotal = styled.p`
+  margin: 0;
 `;
 
 const ListItemContent = styled.p`
@@ -49,7 +58,7 @@ const ListItemContent = styled.p`
 const DeleteButton = styled.button`
   position: absolute;
   right: 0;
-  margin: 10px;
+  margin: 25px;
   border-radius: 100%;
   color: ${white};
   background: transparent;

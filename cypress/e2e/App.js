@@ -60,4 +60,19 @@ describe('App', () => {
       .get('section > div > p')
       .should('have.text', 'Total: $ 0,00');
   });
+
+  it('should show the partial total of a transaction', () => {
+    cy.get('input')
+      .type(1000)
+      .get('section > div > div > button')
+      .contains('+ Credit')
+      .click()
+      .get('input')
+      .type(1000)
+      .get('section > div > div > button')
+      .contains('+ Credit')
+      .click()
+      .get('#partialTotal1')
+      .should('have.text', 'Total Parcial:20');
+  });
 });

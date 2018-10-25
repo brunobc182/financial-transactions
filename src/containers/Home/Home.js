@@ -23,6 +23,7 @@ export default class Home extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleNewTransaction = this.handleNewTransaction.bind(this);
     this.handleDeleteTransaction = this.handleDeleteTransaction.bind(this);
+    this.handleParcialTotal = this.handleParcialTotal.bind(this);
   }
 
   componentDidMount() {
@@ -49,13 +50,21 @@ export default class Home extends Component {
     });
   }
 
-  handleNewTransaction(type) {
-    const { amount } = this.state;
-    const handleDebitValue = type === DEBIT ? -amount : amount;
+  handleParcialTotal(handleDebitValue) {
+    const { transactions } = this.state;
+    const tempTotal = transactions.reduce((acc, item) => acc + item.value, 0);
 
-    this.setState(({ transactions }) => ({
+    return tempTotal + handleDebitValue;
+  }
+
+  handleNewTransaction(type) {
+    const { amount, transactions } = this.state;
+    const handleDebitValue = type === DEBIT ? -amount : amount;
+    const partialTotal = this.handleParcialTotal(handleDebitValue);
+
+    this.setState(() => ({
       amount: 0,
-      transactions: [...transactions, { type, value: handleDebitValue }],
+      transactions: [...transactions, { type, value: handleDebitValue, partialTotal }],
     }));
   }
 

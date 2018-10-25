@@ -11,6 +11,7 @@ describe('TransactionList', () => {
     {
       value: 10,
       type: CREDIT,
+      partialTotal: 10,
     },
   ];
   it('should render correctly', () => {
@@ -23,6 +24,7 @@ describe('TransactionList', () => {
       {
         value: 10,
         type: DEBIT,
+        partialTotal: 10,
       },
     ];
     const tree = renderer

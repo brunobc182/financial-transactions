@@ -2,18 +2,18 @@
 
 exports[`Home should render correctly 1`] = `
 <section
-  className="sc-htoDjs kXIWvg"
+  className="sc-dnqmqq hVJGqg"
 >
   <h1
-    className="sc-dnqmqq hQhTQM"
+    className="sc-iwsKbI hQtdHY"
   >
     My Transactions
   </h1>
   <div
-    className="sc-iwsKbI goSOXs"
+    className="sc-gZMcBi chlcBJ"
   >
     <div
-      className="sc-gZMcBi bLaLEq"
+      className="sc-gqjmRU gpNulM"
     >
       <button
         className="sc-bdVaJa FuSKv"
@@ -34,17 +34,17 @@ exports[`Home should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-bZQynM kzlsZH"
+    className="sc-gzVnrw tDqEr"
   >
     <p
-      className="sc-gzVnrw cVHVJI"
+      className="sc-htoDjs hOutTw"
     >
       Total: 
       $ 0,00
     </p>
   </div>
   <div
-    className="sc-gqjmRU gTfdsi"
+    className="sc-VigVT hYBClO"
   >
     <ol
       className="sc-htpNat gRaolP"
